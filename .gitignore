@@ -2,3 +2,7 @@
 # start agent & add key
 # start agent & add key.pub
 Caprice-H/
+
+# VS Code
+.vscode/
+*.code-workspace
