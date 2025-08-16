@@ -25,3 +25,17 @@ What is a DBMS
 Other DBMS I’ve heard of
 SQLite
  Microsoft SQL Server
+
+6:59–8:44 — DBMS differences
+ SQLite is embedded single file, MySQL/PostgreSQL are serverbased.
+Server DBMS handle more users & much bigger workloads.
+PostgreSQL = advanced features MySQL = widely used in web stacks SQLite = 
+portable & zero work to config.
+
+8:44 — What is SQL?
+
+My answer (before seeing it):
+SQL is a language for speaking directly to the databases.
+Given answer: 
+SQL is the standard language to define, query, and manipulate relational 
+databases.
