@@ -14,3 +14,14 @@ Why move from spreadsheets? (my answer)
 Collaboration causes version conflicts one always has to close a file for 
 another to work in
 Databases provide schemas, constraints, indexes, transactions for integrity.
+
+ 4:13–6:59 — Terms
+What is a database?
+  A structured collection of data in tables.
+
+What is a DBMS
+  Software that stores, enforces rules, and processes queries.
+
+Other DBMS I’ve heard of
+SQLite
+ Microsoft SQL Server
