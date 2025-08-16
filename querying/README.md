@@ -39,3 +39,14 @@ SQL is a language for speaking directly to the databases.
 Given answer: 
 SQL is the standard language to define, query, and manipulate relational 
 databases.
+
+8:44–12:25 — Query & SQLite
+What is a query? 
+  A formal request for data or action from the database, expressed in SQL.
+
+Common way SQLite is used: 
+  Lightweight, file based database in apps, prototypes, teaching. No server 
+just a db file.
+
+Questions I still have:
+  When should I switch from SQLite to a server DBMS?
