@@ -445,3 +445,21 @@ select command — q3
 │ While We Were Dreaming                │ 2023 │
 │ Pyre                                  │ 2023 │
 └───────────────────────────────────────┴──────┘
+limit command — q1
+Boulder|2023
+Whale|2023
+The Gospel According to the New World|2023
+Standing Heavy|2023
+Time Shelter|2023
+
+limit command — q2
+Boulder|Eva Baltasar
+Whale|Cheon Myeong-Kwan
+The Gospel According to the New World|Maryse Condé
+Standing Heavy|Gauz
+Time Shelter|Georgi Gospodinov
+Is Mother Dead|Vigdis Hjorth
+Jimi Hendrix Live in Lviv|Andrey Kurkov
+The Birthday Party|Laurent Mauvignier
+While We Were Dreaming|Clemens Meyer
+Pyre|Perumal Murugan
