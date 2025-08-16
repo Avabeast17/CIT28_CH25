@@ -50,3 +50,13 @@ just a db file.
 
 Questions I still have:
   When should I switch from SQLite to a server DBMS?
+
+ Style notes (from 19:37)
+ SQL keywords in UPPERCASE (SELECT, FROM, WHERE, LIMIT) for readability.
+ Consistent quoting (video uses "double quotes" for identifiers).
+ One clause per line so diffs are clean and queries are easy to scan.
+
+ Questions I had (16:32–19:37)
+Why do some examples show "double quotes" and some show 'single quotes'?
+When should I use SELECT * vs selecting specific columns?
+Does row order really matter if I don’t use ORDER BY?
