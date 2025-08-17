@@ -716,3 +716,85 @@ limit command — q2
 │ While We Were Dreaming                │ Clemens Meyer      │
 │ Pyre                                  │ Perumal Murugan    │
 └───────────────────────────────────────┴────────────────────┘
+part 3 — q1: show 5 books
+┌───────────────────────────────────────┬───────────────────┬──────┐
+│                 title                 │      author       │ year │
+├───────────────────────────────────────┼───────────────────┼──────┤
+│ Boulder                               │ Eva Baltasar      │ 2023 │
+│ Whale                                 │ Cheon Myeong-Kwan │ 2023 │
+│ The Gospel According to the New World │ Maryse Condé      │ 2023 │
+│ Standing Heavy                        │ Gauz              │ 2023 │
+│ Time Shelter                          │ Georgi Gospodinov │ 2023 │
+└───────────────────────────────────────┴───────────────────┴──────┘
+
+part 3 — q2: 2023 titles only
+┌───────────────────────────────────────┬──────┐
+│                 title                 │ year │
+├───────────────────────────────────────┼──────┤
+│ Boulder                               │ 2023 │
+│ Whale                                 │ 2023 │
+│ The Gospel According to the New World │ 2023 │
+│ Standing Heavy                        │ 2023 │
+│ Time Shelter                          │ 2023 │
+│ Is Mother Dead                        │ 2023 │
+│ Jimi Hendrix Live in Lviv             │ 2023 │
+│ The Birthday Party                    │ 2023 │
+│ While We Were Dreaming                │ 2023 │
+│ Pyre                                  │ 2023 │
+└───────────────────────────────────────┴──────┘
+
+part 3 — q3: top 10 by rating (desc)
+┌───────────────────────────────────────┬────────┐
+│                 title                 │ rating │
+├───────────────────────────────────────┼────────┤
+│ The Eighth Life                       │ 4.52   │
+│ A New Name: Septology VI-VII          │ 4.5    │
+│ The Other Name: Septology I-II        │ 4.19   │
+│ The Years                             │ 4.18   │
+│ Still Born                            │ 4.14   │
+│ When We Cease to Understand the World │ 4.14   │
+│ Elena Knows                           │ 4.1    │
+│ The Flying Mountain                   │ 4.1    │
+│ Hurricane Season                      │ 4.08   │
+│ The Books of Jacob                    │ 4.06   │
+└───────────────────────────────────────┴────────┘
+
+part 3 — q4: authors with books after 2018
+┌─────────────────────┐
+│       author        │
+├─────────────────────┤
+│ Adania Shibli       │
+│ Alia Trabucco Zerán │
+│ Amanda Svensson     │
+│ Andrey Kurkov       │
+│ Andrzej Tichy       │
+│ Annie Ernaux        │
+│ Benajamín Labatut   │
+│ Bora Chung          │
+│ Can Xue             │
+│ Cheon Myeong-Kwan   │
+└─────────────────────┘
+
+part 3 — q5: count rows per year
+┌──────┬─────┐
+│ year │ cnt │
+├──────┼─────┤
+│ 2018 │ 13  │
+│ 2019 │ 13  │
+│ 2020 │ 13  │
+│ 2021 │ 13  │
+│ 2022 │ 13  │
+│ 2023 │ 13  │
+└──────┴─────┘
+
+part 3 — q6: average rating per year (2 decimals)
+┌──────┬────────────┐
+│ year │ avg_rating │
+├──────┼────────────┤
+│ 2022 │ 3.87       │
+│ 2023 │ 3.79       │
+│ 2020 │ 3.79       │
+│ 2018 │ 3.74       │
+│ 2021 │ 3.69       │
+│ 2019 │ 3.64       │
+└──────┴────────────┘
