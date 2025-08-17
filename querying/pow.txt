@@ -798,3 +798,122 @@ part 3 — q6: average rating per year (2 decimals)
 │ 2021 │ 3.69       │
 │ 2019 │ 3.64       │
 └──────┴────────────┘
+part 3 — q1: show 5 books
+┌───────────────────────────────────────┬───────────────────┬──────┐
+│                 title                 │      author       │ year │
+├───────────────────────────────────────┼───────────────────┼──────┤
+│ Boulder                               │ Eva Baltasar      │ 2023 │
+│ Whale                                 │ Cheon Myeong-Kwan │ 2023 │
+│ The Gospel According to the New World │ Maryse Condé      │ 2023 │
+│ Standing Heavy                        │ Gauz              │ 2023 │
+│ Time Shelter                          │ Georgi Gospodinov │ 2023 │
+└───────────────────────────────────────┴───────────────────┴──────┘
+
+part 3 — q2: 2023 titles only
+┌───────────────────────────────────────┬──────┐
+│                 title                 │ year │
+├───────────────────────────────────────┼──────┤
+│ Boulder                               │ 2023 │
+│ Whale                                 │ 2023 │
+│ The Gospel According to the New World │ 2023 │
+│ Standing Heavy                        │ 2023 │
+│ Time Shelter                          │ 2023 │
+│ Is Mother Dead                        │ 2023 │
+│ Jimi Hendrix Live in Lviv             │ 2023 │
+│ The Birthday Party                    │ 2023 │
+│ While We Were Dreaming                │ 2023 │
+│ Pyre                                  │ 2023 │
+└───────────────────────────────────────┴──────┘
+
+part 3 — q3: top 10 by rating (desc)
+┌───────────────────────────────────────┬────────┐
+│                 title                 │ rating │
+├───────────────────────────────────────┼────────┤
+│ The Eighth Life                       │ 4.52   │
+│ A New Name: Septology VI-VII          │ 4.5    │
+│ The Other Name: Septology I-II        │ 4.19   │
+│ The Years                             │ 4.18   │
+│ Still Born                            │ 4.14   │
+│ When We Cease to Understand the World │ 4.14   │
+│ Elena Knows                           │ 4.1    │
+│ The Flying Mountain                   │ 4.1    │
+│ Hurricane Season                      │ 4.08   │
+│ The Books of Jacob                    │ 4.06   │
+└───────────────────────────────────────┴────────┘
+
+part 3 — q4: authors with books after 2018
+┌─────────────────────┐
+│       author        │
+├─────────────────────┤
+│ Adania Shibli       │
+│ Alia Trabucco Zerán │
+│ Amanda Svensson     │
+│ Andrey Kurkov       │
+│ Andrzej Tichy       │
+│ Annie Ernaux        │
+│ Benajamín Labatut   │
+│ Bora Chung          │
+│ Can Xue             │
+│ Cheon Myeong-Kwan   │
+└─────────────────────┘
+
+part 3 — q5: count rows per year
+┌──────┬─────┐
+│ year │ cnt │
+├──────┼─────┤
+│ 2018 │ 13  │
+│ 2019 │ 13  │
+│ 2020 │ 13  │
+│ 2021 │ 13  │
+│ 2022 │ 13  │
+│ 2023 │ 13  │
+└──────┴─────┘
+
+part 3 — q6: average rating per year (2 decimals)
+┌──────┬────────────┐
+│ year │ avg_rating │
+├──────┼────────────┤
+│ 2022 │ 3.87       │
+│ 2023 │ 3.79       │
+│ 2020 │ 3.79       │
+│ 2018 │ 3.74       │
+│ 2021 │ 3.69       │
+│ 2019 │ 3.64       │
+└──────┴────────────┘
+
+part 3 — q7: highest-rated per publisher (sample)
+┌───────────────────────┬─────────────────────────────────────────┬────────┐
+│       publisher       │                  title                  │ rating │
+├───────────────────────┼─────────────────────────────────────────┼────────┤
+│ And Other Stories     │ Phenotypes                              │ 3.84   │
+│ And Other Stories     │ The Remainder                           │ 3.52   │
+│ And Other Stories     │ Wretchedness                            │ 3.45   │
+│ Charco Press          │ Elena Knows                             │ 4.1    │
+│ Charco Press          │ The Adventures of China Iron            │ 3.86   │
+│ Charco Press          │ Die, My Love                            │ 3.53   │
+│ Europa Editions       │ Whale                                   │ 3.97   │
+│ Europa Editions       │ The Enlightenment of The Greengage Tree │ 3.8    │
+│ Faber & Faber         │ The Discomfort of Evening               │ 3.47   │
+│ Fitzcarraldo Editions │ A New Name: Septology VI-VII            │ 4.5    │
+│ Fitzcarraldo Editions │ The Other Name: Septology I-II          │ 4.19   │
+│ Fitzcarraldo Editions │ The Years                               │ 4.18   │
+│ Fitzcarraldo Editions │ Still Born                              │ 4.14   │
+│ Fitzcarraldo Editions │ Hurricane Season                        │ 4.08   │
+│ Fitzcarraldo Editions │ The Books of Jacob                      │ 4.06   │
+└───────────────────────┴─────────────────────────────────────────┴────────┘
+
+part 3 — q8: longest books (pages) since 2018
+┌────────────────────────────────────────┬───────┬──────┐
+│                 title                  │ pages │ year │
+├────────────────────────────────────────┼───────┼──────┤
+│ The Eighth Life                        │ 944   │ 2020 │
+│ The Books of Jacob                     │ 920   │ 2022 │
+│ Tomb of Sand                           │ 739   │ 2022 │
+│ A System So Magnificent It Is Blinding │ 544   │ 2023 │
+│ While We Were Dreaming                 │ 528   │ 2023 │
+│ The Shape of the Ruins                 │ 512   │ 2019 │
+│ In Memory of Memory                    │ 510   │ 2021 │
+│ The Birthday Party                     │ 454   │ 2023 │
+│ Red Dog                                │ 432   │ 2020 │
+│ The Impostor                           │ 430   │ 2018 │
+└────────────────────────────────────────┴───────┴──────┘

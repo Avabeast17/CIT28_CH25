@@ -82,3 +82,24 @@ ORDER BY avg_rating DESC
 LIMIT 10;
 
 .output stdout
+
+
+.output '| cat >> pow.txt'
+
+.print ''
+.print 'part 3 — q7: highest-rated per publisher (sample)'
+SELECT publisher, title, rating
+FROM "longlist"
+WHERE rating IS NOT NULL
+ORDER BY publisher, rating DESC
+LIMIT 15;
+
+.print ''
+.print 'part 3 — q8: longest books (pages) since 2018'
+SELECT title, pages, year
+FROM "longlist"
+WHERE pages IS NOT NULL AND year >= 2018
+ORDER BY pages DESC
+LIMIT 10;
+
+.output stdout
