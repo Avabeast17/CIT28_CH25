@@ -60,3 +60,7 @@ Questions I still have:
 Why do some examples show "double quotes" and some show 'single quotes'?
 When should I use SELECT * vs selecting specific columns?
 Does row order really matter if I don’t use ORDER BY?
+
+# Week 2 Querying Part 3
+Practiced filtering (WHERE), sorting (ORDER BY), DISTINCT, aggregation (COUNT, AVG), and LIMIT.
+Recorded outputs in pow.txt with `.output '| cat >> pow.txt'` to append between commits.
