@@ -104,6 +104,8 @@
 
 ---.output stdout
 
+/*
+
 -- Week 3 • Querying Part 4
 .mode box
 .headers on
@@ -156,3 +158,47 @@ WHERE translator IS NOT NULL
   AND translator <> '';
 
 .output stdout
+
+*/
+
+-- === ORDER BY (53:10 → ~1:02:00) ===
+.output '| cat >> pow4.txt'
+
+-- ORDER BY #1: year ASC, title ASC
+.print 'ORDER BY #1: oldest→newest; tie-break title A→Z (what this query does)'
+SELECT title, year
+FROM longlist
+ORDER BY year ASC, title ASC
+LIMIT 15;
+
+-- ORDER BY #2: author ASC, title ASC
+.print 'ORDER BY #2: Author A→Z with title A→Z tie-break (what this query does)'
+SELECT author, title, year
+FROM longlist
+ORDER BY author ASC, title ASC
+LIMIT 15;
+
+-- ORDER BY #3: pages DESC (numeric), tie-break title
+.print 'ORDER BY #3: Longest books first; show top 10 (what this query does)'
+SELECT title, pages
+FROM longlist
+WHERE pages IS NOT NULL
+ORDER BY pages DESC, title ASC
+LIMIT 10;
+
+-- ORDER BY #4: non-NULL translators first, then A→Z
+.print 'ORDER BY #4: Bring translated books to the top, then sort (what this query does)'
+SELECT title, translator
+FROM longlist
+ORDER BY (translator IS NULL) ASC, translator ASC, title ASC
+LIMIT 20;
+
+-- ORDER BY #5: newest first (DESC), top 10
+.print 'ORDER BY #5: Newest→oldest by year; show 10 (what this query does)'
+SELECT title, year
+FROM longlist
+ORDER BY year DESC, title ASC
+LIMIT 10;
+
+.output stdout
+
