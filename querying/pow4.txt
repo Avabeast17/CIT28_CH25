@@ -228,3 +228,55 @@ Standing Heavy|2023
 Still Born|2023
 The Birthday Party|2023
 The Gospel According to the New World|2023
+A1: COUNT(*) total books (what this query does)
+78
+A2: COUNT(*) books in 2023 (what this query does)
+13
+A3: MIN(year), MAX(year) present (what this query does)
+2018|2023
+A4: AVG(pages) overall, 1 decimal (what this query does)
+286.5
+A5: SUM(pages) for 2023 (what this query does)
+4188
+A6: COUNT(DISTINCT author) (what this query does)
+72
+A7: Top 10 authors by number of titles (what this query does)
+Olga Tokarczuk|3
+Can Xue|2
+Fernanda Melchor|2
+Jon Fosse|2
+Samanta Schweblin|2
+Adania Shibli|1
+Ahmed Saadawi|1
+Alia Trabucco Zerán|1
+Amanda Svensson|1
+Andrey Kurkov|1
+A8: AVG(pages) by year (what this query does)
+2018|312.2
+2019|239.2
+2020|327.6
+2021|222.6
+2022|295.1
+2023|322.2
+A9: MAX(LENGTH(title)) longest title length (what this query does)
+42
+A10: Years with >= 10 titles using HAVING (what this query does)
+2023|13
+2022|13
+2021|13
+2020|13
+2019|13
+2018|13
+A11: Authors with >1000 total pages (what this query does)
+Olga Tokarczuk|1600
+A12: MIN(title), MAX(title) lexicographic (what this query does)
+A New Name: Septology VI-VII|Wretchedness
+A13: AVG(LENGTH(title)) by year (what this query does)
+2018|16.6
+2019|19.1
+2020|19.2
+2021|19.5
+2022|15.5
+2023|16.9
+A14: COUNT(DISTINCT translator) where present (what this query does)
+64

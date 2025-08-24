@@ -161,6 +161,7 @@ WHERE translator IS NOT NULL
 
 */
 
+/* 
 -- === ORDER BY (53:10 → ~1:02:00) ===
 .output '| cat >> pow4.txt'
 
@@ -202,3 +203,90 @@ LIMIT 10;
 
 .output stdout
 
+*/
+
+-- === AGGREGATES (1:02:06 → 1:17:21) ===
+.output '| cat >> pow4.txt'
+
+-- A1
+.print 'A1: COUNT(*) total books (what this query does)'
+SELECT COUNT(*) AS total_books FROM longlist;
+
+-- A2
+.print 'A2: COUNT(*) books in 2023 (what this query does)'
+SELECT COUNT(*) AS books_2023 FROM longlist WHERE year = 2023;
+
+-- A3
+.print 'A3: MIN(year), MAX(year) present (what this query does)'
+SELECT MIN(year) AS earliest, MAX(year) AS latest FROM longlist;
+
+-- A4
+.print 'A4: AVG(pages) overall, 1 decimal (what this query does)'
+SELECT ROUND(AVG(pages), 1) AS avg_pages FROM longlist WHERE pages IS NOT NULL;
+
+-- A5
+.print 'A5: SUM(pages) for 2023 (what this query does)'
+SELECT SUM(pages) AS total_pages_2023
+FROM longlist
+WHERE year = 2023 AND pages IS NOT NULL;
+
+-- A6
+.print 'A6: COUNT(DISTINCT author) (what this query does)'
+SELECT COUNT(DISTINCT author) AS unique_authors FROM longlist;
+
+-- A7
+.print 'A7: Top 10 authors by number of titles (what this query does)'
+SELECT author, COUNT(*) AS n_titles
+FROM longlist
+GROUP BY author
+ORDER BY n_titles DESC, author ASC
+LIMIT 10;
+
+-- A8
+.print 'A8: AVG(pages) by year (what this query does)'
+SELECT year, ROUND(AVG(pages), 1) AS avg_pages
+FROM longlist
+WHERE pages IS NOT NULL
+GROUP BY year
+ORDER BY year ASC;
+
+-- A9
+.print 'A9: MAX(LENGTH(title)) longest title length (what this query does)'
+SELECT MAX(LENGTH(title)) AS longest_title_len FROM longlist;
+
+-- A10
+.print 'A10: Years with >= 10 titles using HAVING (what this query does)'
+SELECT year, COUNT(*) AS n
+FROM longlist
+GROUP BY year
+HAVING n >= 10
+ORDER BY n DESC, year DESC;
+
+-- A11
+.print 'A11: Authors with >1000 total pages (what this query does)'
+SELECT author, SUM(pages) AS total_pages
+FROM longlist
+WHERE pages IS NOT NULL
+GROUP BY author
+HAVING total_pages > 1000
+ORDER BY total_pages DESC, author ASC
+LIMIT 15;
+
+-- A12
+.print 'A12: MIN(title), MAX(title) lexicographic (what this query does)'
+SELECT MIN(title) AS first_title, MAX(title) AS last_title FROM longlist;
+
+-- A13
+.print 'A13: AVG(LENGTH(title)) by year (what this query does)'
+SELECT year, ROUND(AVG(LENGTH(title)), 1) AS avg_title_len
+FROM longlist
+GROUP BY year
+ORDER BY year ASC;
+
+-- A14
+.print 'A14: COUNT(DISTINCT translator) where present (what this query does)'
+SELECT COUNT(DISTINCT translator) AS unique_translators
+FROM longlist
+WHERE translator IS NOT NULL AND translator <> '';
+
+.output stdout
