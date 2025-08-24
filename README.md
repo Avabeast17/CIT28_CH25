@@ -1,117 +1,90 @@
-# Git Workflow Instructions
+Git Workflow Instructions
 
-## Step 1: Modify Your Files
-- Make sure to have **auto-save** selected in your editor.
-- Check the status of your files by running the following command:
+Step 1: Modify Your Files
+Make sure to have auto-save selected in your editor.
+Check the status of your files by running: git status
 
-```bash
-git status
-```
+Step 2: Stage Your Changes
+Stage all changes into your local repository with git add *
+Or stage a specific file with git add filename
 
-## Step 2: Stage Your Changes
-- Stage all changes into your **local** repository:
-
-```bash
-git add *
-```
-
-- Alternatively, stage specific files by replacing `filename` with the name of the file:
-
-```bash
-git add filename
-```
-
-## Step 3: Commit Your Changes
-- Commit the staged changes into your **local** repository with a descriptive commit message:
-
-```bash
+Step 3: Commit Your Changes
+Commit the staged changes with a descriptive commit message:
 git commit -m "commit message"
-```
 
-## Step 4: Push Your Changes
-- Push your commits from your **local** repository to your repository on **GitHub**:
-
-```bash
+Step 4: Push Your Changes
+Push your commits from your local repository to GitHub:
 git push
-```
 
 Week 1 Querying Part 1
 
- 0:00–4:13 — Getting started
-Notes:
-  Spreadsheets are fine for small, singleuser tasks, but they break down with 
-growth, multi user access, and when we need for sure  correctness.
-  Databases store data in tables with types and constraints to keep data 
-consistent.
-   SQL lets us filter, sort, join, and compute reproducibly.
-  Core ideas: tables, primary keys, relationships, queries.
+Getting started (0:00–4:13)
+Spreadsheets are fine for small single user tasks, but they break down when things grow, multiple people need access, or correctness matters.
+Databases solve this with tables, types, and constraints to keep data consistent.
+SQL lets us filter, sort, join, and compute reproducibly.
+Core ideas: tables, primary keys, relationships, queries.
 
-Why move from spreadsheets? (my answer)
- Spreadsheets get messy. Hard to enforce rules or relationships.
-Collaboration causes version conflicts one always has to close a file for 
-another to work in
-Databases provide schemas, constraints, indexes, transactions for integrity.
+Why move from spreadsheets?
+Spreadsheets get messy and hard to enforce rules. Collaboration is awkward because files can’t be edited at the same time without conflicts.
+Databases provide schemas, constraints, indexes, and transactions for integrity.
 
- 4:13–6:59 — Terms
-What is a database?
-  A structured collection of data in tables.
+Terms (4:13–6:59)
+Database = structured collection of data in tables.
+DBMS = software that stores, enforces rules, and processes queries.
+Examples: SQLite, Microsoft SQL Server.
 
-What is a DBMS
-  Software that stores, enforces rules, and processes queries.
+DBMS differences (6:59–8:44)
+SQLite is an embedded single file.
+MySQL/PostgreSQL are server-based and handle more users and bigger workloads.
+PostgreSQL has advanced features. MySQL is popular in web stacks. SQLite is portable and requires zero setup.
 
-Other DBMS I’ve heard of
-SQLite
- Microsoft SQL Server
+What is SQL? (8:44)
+Before: I thought SQL was just a way to talk to databases.
+Given: SQL is the standard language to define, query, and manipulate relational databases.
 
-6:59–8:44 — DBMS differences
- SQLite is embedded single file, MySQL/PostgreSQL are serverbased.
-Server DBMS handle more users & much bigger workloads.
-PostgreSQL = advanced features MySQL = widely used in web stacks SQLite = 
-portable & zero work to config.
-
-8:44 — What is SQL?
-
-My answer (before seeing it):
-SQL is a language for speaking directly to the databases.
-Given answer: 
-SQL is the standard language to define, query, and manipulate relational 
-databases.
-
-8:44–12:25 — Query & SQLite
-What is a query? 
-  A formal request for data or action from the database, expressed in SQL.
-
-Common way SQLite is used: 
-  Lightweight, file based database in apps, prototypes, teaching. No server 
-just a db file.
+Query & SQLite (8:44–12:25)
+Query = a formal request for data or action in SQL.
+SQLite = lightweight, file-based database used in apps, prototypes, and teaching.
 
 Questions I still have:
-  When should I switch from SQLite to a server DBMS?
+When should I switch from SQLite to a server DBMS?
 
- Style notes (from 19:37)
- SQL keywords in UPPERCASE (SELECT, FROM, WHERE, LIMIT) for readability.
- Consistent quoting (video uses "double quotes" for identifiers).
- One clause per line so diffs are clean and queries are easy to scan.
+Style notes (19:37)
+SQL keywords in uppercase (SELECT, FROM, WHERE) for readability.
+Double quotes used for identifiers.
+One clause per line for cleaner diffs.
 
- Questions I had (16:32–19:37)
-Why do some examples show "double quotes" and some show 'single quotes'?
-When should I use SELECT * vs selecting specific columns?
-Does row order really matter if I don’t use ORDER BY?
+Other questions (16:32–19:37)
+Why double quotes vs single quotes?
+When to use SELECT * vs listing columns?
+Does row order matter without ORDER BY?
 
-# Week 2 Querying Part 3
-Practiced filtering (WHERE), sorting (ORDER BY), DISTINCT, aggregation (COUNT, AVG), and LIMIT.
-Recorded outputs in pow.txt with `.output '| cat >> pow.txt'` to append between commits.
+Week 2 Querying Part 3
+
+Practiced filtering with WHERE, sorting with ORDER BY, DISTINCT, aggregation (COUNT, AVG), and LIMIT.
+Captured results in pow.txt using .output '| cat >> pow.txt' between commits.
+This round helped me see how combining filters and sorting makes queries much more powerful.
 
 Week 3 Querying Part 4
 
-Operators (46:01 – 53:10)
-I practiced using different operators like =, !=, <, >, BETWEEN, IN, LIKE, and checking for NULL values. The main things I noticed are that IN is easier than writing a bunch of ORs, and you really have to use parentheses to get AND/OR to work the way you mean. LIKE was handy with % to find patterns in titles. To make sure translators weren’t blank, I had to check both IS NOT NULL and <> ''.
+Operators (46:01–53:10)
+I practiced operators like =, !=, <, >, BETWEEN, IN, LIKE, and checking for NULL values.
+IN is easier than writing multiple ORs. Parentheses matter when mixing AND/OR. LIKE with % is great for finding patterns. To filter translators, I had to use IS NOT NULL and <> ''.
 
-Order By (53:10 – 1:02:00)
-ORDER BY is what sets the order of results. ASC puts things in order from smallest to largest (like earliest year or A to Z), while DESC does the opposite (newest first, or Z to A). You can also list more than one column to break ties, like year first then title. I also learned you can push books with translators to the top using ORDER BY (translator IS NULL) ASC.
+Order By (53:10–1:02:00)
+ORDER BY sorts results. ASC means smallest to largest or A to Z, DESC means largest to smallest or newest first.
+You can list multiple columns to break ties, like year first then title.
+I also learned how to push translated books to the top with ORDER BY (translator IS NULL) ASC.
 
-Aggregates (1:02:06 – 1:17:21)
-I used aggregate functions like COUNT, SUM, AVG, MIN, and MAX. GROUP BY let me split results by year or author, and HAVING let me filter groups after they were formed, which is different from WHERE that filters rows before grouping. One interesting thing is that MIN and MAX on text are alphabetical, not based on title length. I practiced finding counts per year, average pages, and top authors.
+Aggregates (1:02:06–1:17:21)
+Aggregate functions include COUNT, SUM, AVG, MIN, and MAX.
+GROUP BY groups results, HAVING filters groups after aggregation, WHERE filters rows before grouping.
+MIN and MAX on strings sort alphabetically, not by length.
+I practiced counting books per year, averaging pages, finding top authors, and counting distinct translators.
 
 My thoughts
-Doing this round of queries made SQL has helped. It helped me see the flow first filter with WHERE, then sort with ORDER BY, then group or summarize with aggregates. The WHERE vs HAVING difference finally catching that feeling of oh this is how this goes, and I won’t forget that MIN and MAX on strings just mean alphabetical order. Writing the .print notes into the SQL file was actually useful because it forced me to explain to myself what each query was doing. The hardest part was just staying organized in Codespaces, but once I had a rhythm of running .read p4-q.sql and checking pow4.txt, everything came together.
+This section made the SQL workflow clearer: filter with WHERE, order with ORDER BY, then summarize with aggregates.
+The difference between WHERE and HAVING finally clicked.
+I won’t forget that MIN and MAX on text use alphabetical order.
+Writing .print notes into my SQL file forced me to explain each query, which helped me learn.
+The hardest part was staying organized in Codespaces, but once I got into a rhythm of running .read p4-q.sql and checking pow4.txt, it all made sense.
