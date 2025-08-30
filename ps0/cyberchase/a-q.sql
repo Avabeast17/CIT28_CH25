@@ -3,12 +3,12 @@
 .headers on
 
 -- Query 1 (POW capture)
-.output '| cat >> pow-a.txt'
+/*.output '| cat >> pow-a.txt'
 .print 'Query 1: list all data from episodes (expect 140 × 7)'
 SELECT * FROM episodes;
 .print 'Counting results'
 SELECT COUNT(*) AS cnt FROM episodes;
-.output stdout
+.output stdout /*
 
 /*  >>> POE NOTE for README.md (copy only commands, not results) <<<
 .print 'Query 1'
